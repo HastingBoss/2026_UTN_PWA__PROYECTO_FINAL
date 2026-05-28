@@ -9,12 +9,12 @@ import authMiddleware from "./middlewares/auth.middleware.js";
 import workspaceRouter from "./routes/workspace.router.js";
 
 
-if(ENVIRONMENT.MODE === 'development'){
+if (ENVIRONMENT.MODE === 'development') {
     dns.setServers(['8.8.8.8', '8.8.4.4']);
 }
 
 connectMongoDB()
-
+console.log(hola)
 /* 
 Crear una API de express
 Route:
@@ -109,19 +109,19 @@ Un endpoint donde el cliente debera enviarnos por header de autorizacion el acce
 Le daremos los datos de la cuenta
 */
 app.get(
-    '/api/profile', 
-   /*  (request, response, next) => {
-        const random_num = Math.random() 
-        console.log('Numero aleatorion generado:', random_num)
-        if(random_num > 0.5){
-            return response.json({
-                message:"Mala suerte campeon ☠"
-            })
-        }
-        else{
-            next()
-        }
-    }, */
+    '/api/profile',
+    /*  (request, response, next) => {
+         const random_num = Math.random() 
+         console.log('Numero aleatorion generado:', random_num)
+         if(random_num > 0.5){
+             return response.json({
+                 message:"Mala suerte campeon ☠"
+             })
+         }
+         else{
+             next()
+         }
+     }, */
     authMiddleware,
     (request, response) => {
         console.log(
