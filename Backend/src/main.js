@@ -14,7 +14,7 @@ if (ENVIRONMENT.MODE === 'development') {
 }
 
 connectMongoDB()
-console.log(ENVIRONMENT.MONGO_DB_CONNECTION_STRING)
+
 /* 
 Crear una API de express
 Route:
