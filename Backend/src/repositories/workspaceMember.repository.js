@@ -11,7 +11,6 @@ class WorkspaceMemberRepository {
         return membership
     }
 
-    /* Desarrollar los metodos */
     async create(user_id, workspace_id, rol) {
         return await WorkspaceMember.create({
             fk_workspace_id: workspace_id,
@@ -32,8 +31,6 @@ class WorkspaceMemberRepository {
         return await WorkspaceMember.findByIdAndDelete(member_id)
     }
 
-    /* HASTA AQUI */
-
     async getByWorkspaceId(workspace_id) {
         //Lista de membresias por x espacio de trabajo
         const result = await WorkspaceMember
@@ -50,10 +47,6 @@ class WorkspaceMemberRepository {
         )
         return members_mapped
     }
-
-    /* async getByUserId(user_id) {
-        //Lista de membresias por x usuario, saber a que espacios de trabajo pertenece un usuario
-    } */
 
     async getByUserId(user_id) {
         const memberships = await WorkspaceMember

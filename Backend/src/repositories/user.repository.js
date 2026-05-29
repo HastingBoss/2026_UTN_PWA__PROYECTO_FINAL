@@ -24,11 +24,6 @@ class UserRepository {
     }
 
     async deleteById (user_id){
-        /* 
-        SOFT DELETE
-        */
-        //await User.findByIdAndUpdate(user_id, {activo: false})
-
         /* HARD DELETE */
         await User.findByIdAndDelete(user_id)
     }

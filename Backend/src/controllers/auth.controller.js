@@ -230,17 +230,4 @@ const authController = new AuthController();
 
 export default authController
 
-
-/* 
-
-Como manejar un inicio de sesion?
-
-Vamos a tener un endpoint 
-POST /api/auth/login
-    body: {email, password}
-
-    - Buscar al usuario por email
-    - Validar la contraseña (await bcrypt.compare(texto_original, texto_hasheado) esto devolvera un booleano)
-    - Crear un jsonwebtoken con los datos de sesion del usuario (username, email, id, created_at)
-    - responder con ese token (access_token) al cliente
-*/
+

@@ -8,23 +8,27 @@ import { HomeScreen } from './Screens/HomeScreen/HomeScreen'
 const App = () => {
   return (
     <Routes>
-      <Route 
-          path='/login'
-          element={<LoginScreen/>}
+      <Route
+        path='/login'
+        element={<LoginScreen />}
       />
       <Route
         path='/register'
-        element={<RegisterScreen/>}
+        element={<RegisterScreen />}
       />
-      <Route 
+      <Route
         path='/home'
-        element={<HomeScreen/>}
+        element={<HomeScreen />}
       />
-      <Route 
+      <Route
+        path='/reset-password'
+        element={<ResetPasswordScreen />}
+      />
+      <Route
         path='/'
-        element={<LoginScreen/>}
+        element={<LoginScreen />}
       />
-      <Route 
+      <Route
         path='/*'
         element={<Navigate to={'/home'} />}
       />

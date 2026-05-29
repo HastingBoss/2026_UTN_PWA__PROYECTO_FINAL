@@ -10,12 +10,12 @@ export const LoginScreen = () => {
         password: ''
     }
 
-    function onSubmit (formData){
+    function onSubmit(formData) {
         console.log("un usuario intento iniciar sesion", formData)
         login(formData.email, formData.password)
     }
 
-    const {formState, handleChange, handleSubmit} = useForm(initial_form_state, onSubmit)
+    const { formState, handleChange, handleSubmit } = useForm(initial_form_state, onSubmit)
 
 
     return (
@@ -25,11 +25,11 @@ export const LoginScreen = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="email">Email:</label>
-                    <input id='email' name='email' type='email' value={formState.email} onChange={handleChange}/>
+                    <input id='email' name='email' type='email' value={formState.email} onChange={handleChange} />
                 </div>
                 <div>
                     <label htmlFor="password">Contraseña:</label>
-                    <input id='password' name='password' type='password' value={formState.password} onChange={handleChange}/>
+                    <input id='password' name='password' type='password' value={formState.password} onChange={handleChange} />
                 </div>
 
                 <button>Iniciar sesion</button>
